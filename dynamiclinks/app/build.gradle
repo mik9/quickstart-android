@@ -11,7 +11,7 @@ android {
     flavorDimensions "irrelevant"
 
     defaultConfig {
-        applicationId "com.google.firebase.quickstart.deeplinks"
+        applicationId "ua.otpbank.android"
         minSdkVersion 19
         targetSdkVersion 32
         versionCode 1
@@ -20,9 +20,21 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        debug {
+            storeFile file("$rootDir/keystore")
+            storePassword "demodemo"
+            keyAlias "demo"
+            keyPassword "demodemo"
+        }
+    }
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
         release {
             minifyEnabled true
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -35,7 +47,7 @@ android {
 
             // TODO(developer): Replace this with your Dynamic Links URI prefix
             //                  See: https://firebase.google.com/docs/dynamic-links/android/create#set-up-firebase-and-the-dynamic-links-sdk
-            resValue "string", "dynamic_links_uri_prefix", "https://YOUR_APP.page.link"
+            resValue "string", "dynamic_links_uri_prefix", "https://otpdigital.page.link"
         }
     }
 
