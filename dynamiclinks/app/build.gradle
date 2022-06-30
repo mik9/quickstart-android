@@ -47,7 +47,7 @@ android {
 
             // TODO(developer): Replace this with your Dynamic Links URI prefix
             //                  See: https://firebase.google.com/docs/dynamic-links/android/create#set-up-firebase-and-the-dynamic-links-sdk
-            resValue "string", "dynamic_links_uri_prefix", "https://otpdigital.page.link"
+            resValue "string", "dynamic_links_uri_prefix", "https://https://androidcompanion.page.link"
         }
     }
 

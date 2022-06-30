@@ -38,7 +38,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="otpdigital.page.link"
+                    android:host="androidcompanion.page.link"
                     android:scheme="https" />
 
                 <data android:scheme="http" />
